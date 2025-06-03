@@ -1,3 +1,4 @@
+import {AggregateRoot} from '../../../../core/agregate-root'
 export interface CustomerProps {
   name: string;
   //email: Email;
@@ -7,4 +8,8 @@ export interface CustomerProps {
   createdAt: Date;
   updatedAt: Date;
   status: 'ACTIVE' | 'INACTIVE';
+}
+
+export class Customer extends AggregateRoot<CustomerProps> {
+  
 }
